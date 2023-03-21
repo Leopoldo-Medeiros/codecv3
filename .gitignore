@@ -222,3 +222,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+#Nuxt3
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+dist
