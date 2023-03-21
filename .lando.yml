@@ -1,0 +1,26 @@
+name: codecv3
+recipe: lemp
+config:
+  php: '8.1'
+  webroot: pages
+  via: nginx
+  database: mysql:8.0
+  cache: redis
+services:
+  node:
+    type: node:19
+    ssl: 3000
+    scanner: false
+  appserver:
+    type: php
+    xdebug: true
+tooling:
+  setup:
+    cmd:
+      - node: npm install
+  install:
+    cmd:
+      - node: npm install
+  npm:
+    service: node
+    user: root
