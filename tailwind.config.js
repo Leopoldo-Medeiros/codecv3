@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{html,js}',
-    './components/**/*.{html,js}',
+  mode: "jit",
+  purge: [
+    "./assets/**/*.{css}",
+    "./components/*.{vue,js}",
+    "./components/**/*.{vue,js}",
+    "./pages/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./*.{vue,js,ts}",
+    "./nuxt.config.{js,ts}",
   ],
-    theme: {
-      screens: {
-        'sm': '576px',
-        'md': '960px',
-        'lg': '1440px',
-      },
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.vue",
+  ],
+  theme: {
+    screens: {
+      'sm': '576px',
+      'md': '960px',
+      'lg': '1440px',
+    },
     extend: {
       colors: {
         brightRed: 'hsl(12, 88%, 59%)',
@@ -21,7 +36,7 @@ module.exports = {
         veryPaleRed: 'hsl(13, 100%, 96%)',
         veryLightGray: 'hsl(0, 0%, 98%)'
       },
-      typography: ({ theme }) => ({
+      typography: ({theme}) => ( {
         orange: {
           css: {
             '--tw-prose-body': theme('colors.orange[500]'),
@@ -61,13 +76,13 @@ module.exports = {
             '--tw-format-invert-th-bg': theme('colors.orange[700]'),
           },
         },
-      }),
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px'
-    },
+      } ),
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px'
+      },
     },
   },
   plugins: [
