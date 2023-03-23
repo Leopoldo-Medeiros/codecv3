@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepack": "nuxt-module-build",
+    "dev": "nuxt dev",
+    "dev:build": "nuxt build",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/ui": "^0.4.0",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-module": "^4.0.2",
+    "@nuxtjs/stylelint-module": "^5.0.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.14",
+    "changelogen": "^0.5.1",
+    "eslint": "^8.36.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "flowbite-typography": "^1.0.3",
+    "nuxt": "^3.3.1",
+    "postcss": "^8.4.21",
+    "stylelint": "^15.3.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^31.0.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.12",
+    "@heroicons/vue": "^2.0.16",
+    "nuxt-sanctum-auth": "^0.3.1"
+  }
+}

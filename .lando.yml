@@ -1,26 +1,70 @@
 name: codecv3
-recipe: lemp
+recipe: laravel
 config:
-  php: '8.1'
-  webroot: pages
+  php: '8.2'
+  webroot: public
   via: nginx
   database: mysql:8.0
   cache: redis
 services:
   node:
-    type: node:19
+    type: node:18
     ssl: 3000
     scanner: false
   appserver:
-    type: php
+    type: php:8.2
     xdebug: true
+    build_as_root:
+      - rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && pkill -o -USR2 php-fpm
+    overrides:
+      environment:
+        # Support debugging CLI with XDEBUG.
+        PHP_IDE_CONFIG: "serverName=appserver"
+        XDEBUG_SESSION_START: lando
+        LANDO_HOST_IP: "host.docker.internal"
+        XDEBUG_CONFIG: "remote_enable=1 remote_host=host.docker.internal"
 tooling:
   setup:
     cmd:
-      - node: npm install
+      - appserver: composer install --no-cache
+      - node: cd frontend && npm install
+      - appserver: php artisan setup:app
+      - appserver: php artisan key:generate
+      - appserver: php artisan migrate --seed
   install:
     cmd:
-      - node: npm install
+      - appserver: composer install --no-cache
+      - node: cd frontend && npm install
+      - appserver: php artisan setup:app -i
+      - appserver: php artisan key:generate
+      - appserver: php artisan migrate --seed
+  nuxt-url:
+    service: appserver
+    cmd: php artisan setup:node
+  nuxt:
+    cmd:
+      - appserver: php artisan setup:node
+      - node: cd /app/frontend && npm run dev
   npm:
     service: node
     user: root
+  tinker:
+    service: appserver
+    cmd: php artisan tinker
+  migrate:
+    service: appserver
+    cmd: php artisan migrate
+  rollback:
+    service: appserver
+    cmd: php artisan migrate:rollback --step=1
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for nginx.
+    cmd: rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && docker-php-ext-enable xdebug && pkill -o -USR2 php-fpm && echo "Xdebug enabled"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for nginx.
+    cmd: rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && pkill -o -USR2 php-fpm && echo "Xdebug disabled"
+    user: root
+
