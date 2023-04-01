@@ -11,6 +11,9 @@ module.exports = {
         'lg': '1440px',
       },
     extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif ']
+        },
       colors: {
         brightRed: 'hsl(12, 88%, 59%)',
         brightRedLight: 'hsl(12, 88%, 69%)',
@@ -71,6 +74,8 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
     require('flowbite-typography')({
       className: 'custom-class',
     }),
