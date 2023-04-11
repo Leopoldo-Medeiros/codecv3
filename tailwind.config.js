@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import "node_modules/flag-icons/css/flag-icons.min.css";
+
 module.exports = {
   content: [
     './pages/**/*.{html,js}',
