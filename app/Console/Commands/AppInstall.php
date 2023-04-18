@@ -51,7 +51,6 @@ class AppInstall extends Command
 
                 return 0;
             }
-            $appSlug = Str::slug($appName);
         } else {
             $appName = null;
         }
@@ -64,7 +63,6 @@ class AppInstall extends Command
         $this->copyAndSetupFrontendEnvFile($appUrl);
 
         if (! $installOnly) {
-            $this->adjustRio($appSlug);
             $this->adjustNuxtConfig($appName);
         }
 
@@ -88,7 +86,7 @@ class AppInstall extends Command
             }
 
             replaceInFile(
-                'APP_URL=https://application-name.localhost.apple.com',
+                'APP_URL=https://application-name.localhost.com',
                 "APP_URL={$appUrl}",
                 base_path('.env')
             );
@@ -110,22 +108,12 @@ class AppInstall extends Command
 
             // frontend/.env
             replaceInFile(
-                'API_URL=https://base-application.localhost.apple.com',
+                'API_URL=https://base-application.localhost.com',
                 "API_URL={$appUrl}",
                 base_path('frontend/.env')
             );
             $this->comment('Replaced API_URL in frontend/.env.');
         }
-    }
-
-    public function adjustRio($appSlug): void
-    {
-        replaceInFile(
-            '<app-slug>',
-            $appSlug,
-            base_path('rio.yml')
-        );
-        $this->comment("Rio docker repo set to {$appSlug}.");
     }
 
     public function adjustNuxtConfig($appName): void
@@ -142,12 +130,6 @@ class AppInstall extends Command
             base_path('frontend/nuxt.config.js')
         );
 
-        // nuxt layout
-        replaceInFile(
-            '>Application Name<',
-            ">{$appName}<",
-            base_path('frontend/layouts/default.vue')
-        );
         $this->comment("Nuxt app name changed to {$appName}.");
     }
 

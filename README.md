@@ -12,8 +12,7 @@
 2. Navigate to the cloned repository: `cd codecv3`
 3. Navigate to the cloned repository: `git checkout nuxt3`
 4. Start Lando: `lando start`
-5. Install composer and npm dependencies, and copy `.env` to root of the project files: `lando install`
-6. Run `lando install`
+5. Run `lando install` will install composer and npm dependencies, and copy `.env` to root of the project files.
 
 ### Running the Application
 
