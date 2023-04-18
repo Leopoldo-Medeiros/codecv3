@@ -1,24 +1,22 @@
 <template>
-  <hero-section />
-  <features-section />
-  <testimonials />
+  <AppHeroSection />
+  <AppFeaturesSection />
+  <AppTestimonials />
   <main class="mx-4 my-16">
     <div class="text-center">
-      <h1 class="text-5xl">
-        <span>Choose</span>
-        <span class="text-orange-600 tracking-wide">a plan</span>
+      <h1 class="text-4xl">
+        <span class="font-bold">Choose</span>
+        <span class=" font-bold text-orange-600 tracking-wide">a plan</span>
       </h1>
-      <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:full">
-        Choose a plan that works best for you and your career.
+      <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:text-3xl">
+        Choose a plan that works best for you and your career
       </p>
     </div>
 
     <!-- Pricing cards section-->
-    <div
-      class="flex flex-col items-center justify-center mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0"
-    >
+    <div class="flex flex-col items-center justify-center mt-32 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
       <!-- Basic Card-->
-      <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
+      <div class="carousel rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl duration-500 hover:scale-110">
         <h1 class="text-black font-semibold text-2xl">Basic</h1>
         <p class="pt-2 tracking-wide">
           <span class="text-lg line-through dark:text-red-300">&nbsp;79€&nbsp;</span>
@@ -50,7 +48,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                       d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
-              <span>LinkedIn Profile Optimization</span>
+              <span>LinkedIn Profile</span>
             </li>
             <li class="flex justify-left space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -62,14 +60,13 @@
             </li>
           </ul>
           <span class="text-orange-600 font-bold hover:text-blue-700 flex justify-left mt-12 ml-1">
-                        <NuxtLink to="/pricing">See more &rarr;</NuxtLink>
-                    </span>
+            <NuxtLink to="/pricing">See more &rarr;</NuxtLink>
+          </span>
         </div>
       </div>
 
       <!-- Standard -->
-      <div
-        class="relative w-96 p-8 bg-gray-900 text-center rounded-3xl text-white pr-16 shadow-xl lg:w-80 lg:transform lg:scale-125">
+      <div class="relative w-80 p-8 bg-gray-900 text-center rounded-3xl text-white pr-16 shadow-xl lg:w-80 lg:transform lg:scale-125 lg:transform lg:scale-125 transform transition duration-500 hover:scale-110">
         <h1 class="text-white font-semibold text-2xl">Standard</h1>
         <p class="pt-2 tracking-wide">
           <span class="text-lg line-through dark:text-red-300">&nbsp;149€&nbsp;</span>
@@ -101,12 +98,12 @@
               <span>Cover Letter</span>
             </li>
             <li class="flex justify-left space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                   stroke="red" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor" class="w-6 h-6 dark:text-green-500">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
               </svg>
-              <span>LinkedIn Profile Optimization</span>
+              <span>LinkedIn Profile</span>
             </li>
             <li class="flex justify-left space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -117,14 +114,14 @@
               <span>Interview Preparation</span>
             </li>
           </ul>
-          <span class="text-white font-bold hover:text-blue-300 flex justify-left mt-12 ml-1">
-                        <NuxtLink to="/pricing">See more &rarr;</NuxtLink>
-                    </span>
+          <span class="text-white font-bold hover:text-green-400 flex justify-left mt-12 ml-1">
+    					<NuxtLink to="/pricing">See more &rarr;</NuxtLink>
+    				</span>
         </div>
       </div>
 
       <!-- Premium -->
-      <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
+      <div class="w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl duration-500 hover:scale-110">
         <h1 class="text-black font-semibold text-2xl">Premium</h1>
         <p class="pt-2 tracking-wide">
           <span class="text-lg line-through dark:text-red-300">&nbsp;199€&nbsp;</span>
@@ -156,7 +153,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
               </svg>
-              <span>LinkedIn Profile Optimization</span>
+              <span>LinkedIn Profile</span>
             </li>
             <li class="flex justify-left space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -168,17 +165,14 @@
             </li>
           </ul>
           <span class="text-orange-600 font-bold hover:text-blue-700 flex justify-left mt-12 ml-1">
-                        <NuxtLink to="/pricing">See more &rarr;</NuxtLink>
-                    </span>
+    					<NuxtLink to="/pricing">See more &rarr;</NuxtLink>
+    				</span>
         </div>
       </div>
     </div>
   </main>
 </template>
 <script setup lang="ts">
-import FeaturesSection from "~/components/app/FeaturesSection.vue";
-import Testimonials from "~/components/app/Testimonials.vue";
-import HeroSection from "~/components/app/HeroSection.vue";
 
 useHead({
   title: 'CODE CV',

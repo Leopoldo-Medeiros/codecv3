@@ -2,18 +2,22 @@
   <!-- Pricing cards section-->
   <div class="main-h-screen flex justify-center items-center mb-52">
     <div>
-      <div class="text-center font-semibold mt-32">
-        <h1 class="text-5xl">
-          <span>Faster and smarter ways to land</span>
-          <span class="text-orange-600 tracking-wide">your next job</span>
-        </h1>
-        <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:full mb-8">
-          Choose a plan to advance your limitless career
-        </p>
+      <div class="flex flex-wrap justify-center font-semibold mt-32">
+        <div class="text-center align-middle">
+          <h1 class="text-5xl sm:text-6xl">
+            <span>Faster and smarter ways to land</span>
+            <span class="text-orange-600 tracking-wide">your next job</span>
+          </h1>
+          <p class="flex flex-wrap justify-center pt-6 text-xl text-gray-400 font-normal w-full px-8 md:text-3xl">
+            Choose a plan to advance your limitless career
+          </p>
+        </div>
       </div>
-      <div class="pt-24 flex flex-row">
+
+      <!-- CARDS -->
+      <div class="flex flex-col items-center justify-center mt-32 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
         <!-- Basic Card-->
-        <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-2xl">
+        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl transform transition duration-500 hover:scale-110">
           <h1 class="text-black font-semibold text-2xl">Basic</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;79€&nbsp;</span>
@@ -21,7 +25,7 @@
             <span class="text-gray-400 align-top">€</span>
           </p>
           <hr class="mt-4 border-1"/>
-          <div class="pt-8">
+          <div class="pt-4 pb-4 pl-4 pr-4">
             <ul class="self-stretch flex-1 space-y-2">
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -30,7 +34,7 @@
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                         clip-rule="evenodd"/>
                 </svg>
-                <span>CV writing in English or Portuguese</span>
+                <span>CV writing in EN or PT</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -73,7 +77,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/>
                 </svg>
-                <span>Deadline: Up to 5 Working Days</span>
+                <span>Deadline: ~5 Days</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -81,7 +85,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round"
                         d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span>LinkedIn Profile Optimization</span>
+                <span>LinkedIn Profile</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -92,14 +96,14 @@
                 <span>Interview Preparation</span>
               </li>
             </ul>
-            <!-- Button -->
+            <!-- Button-->
             <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-36">
+                    class="mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-36 ml-10">
               <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
               </svg>
-              <NuxtLink to="/billing">
+              <NuxtLink to="/billing" target="_blank">
                 Buy now
               </NuxtLink>
             </button>
@@ -107,15 +111,20 @@
         </div>
 
         <!-- Standard -->
-        <div class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white shadow-2xl border-white transform scale-125">
+        <div class="relative w-80 p-8 bg-gray-900 text-center rounded-3xl text-white pr-16 shadow-xl lg:w-80 lg:transform lg:scale-125 transform transition duration-500 hover:scale-110">
           <h1 class="text-white font-semibold text-2xl">Standard</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;149€&nbsp;</span>
             <span class="text-5xl font-bold">99</span>
             <span class="text-gray-400 align-top">€</span>
           </p>
+          <div class="absolute top-4 right-4">
+            <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">
+              Popular
+            </p>
+          </div>
           <hr class="mt-4 border-1"/>
-          <div class="pt-8">
+          <div class="pt-4 pb-4 pl-4 pr-4">
             <ul class="self-stretch flex-1 space-y-2">
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -173,7 +182,7 @@
                      stroke="currentColor" class="w-6 h-6">
                   <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/>
                 </svg>
-                <span>Deadline: ~ 5 Working Days</span>
+                <span>Deadline: ~5 Days</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -181,7 +190,7 @@
                   <path stroke-linecap="round"
                         d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
                 </svg>
-                <span>Video Call (Max 30min)</span>
+                <span>Video Call (30min)</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -189,7 +198,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                 </svg>
-                <span>LinkedIn Profile Optimization</span>
+                <span>LinkedIn Profile</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -201,26 +210,21 @@
               </li>
             </ul>
             <!-- Button-->
-            <span type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-20">
-                        <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                        </svg>
-                        <NuxtLink to="/billing">
-                            Buy now
-                        </NuxtLink>
-                    </span>
-          </div>
-          <div class="absolute top-4 right-4">
-            <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">
-              Popular
-            </p>
+            <button type="button"
+                    class="mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-20 ml-10">
+              <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+              </svg>
+              <NuxtLink to="/billing" target="_blank">
+                Buy now
+              </NuxtLink>
+            </button>
           </div>
         </div>
 
         <!-- Premium -->
-        <div class="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-2xl">
+        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl duration-500 hover:shadow-2xl hover:scale-110">
           <h1 class="text-black font-semibold text-2xl">Premium</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;199€&nbsp;</span>
@@ -228,7 +232,7 @@
             <span class="text-gray-400 align-top">€</span>
           </p>
           <hr class="mt-4 border-1"/>
-          <div class="pt-8">
+          <div class="pt-4 pb-4 pl-4 pr-4">
             <ul class="self-stretch flex-1 space-y-2">
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -286,14 +290,14 @@
                      stroke="currentColor" class="w-6 h-6">
                   <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/>
                 </svg>
-                <span>Deadline: ~ 5 Working Days</span>
+                <span>Deadline: ~10 Days</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                      class="w-6 h-6">
                   <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z"/>
                 </svg>
-                <span>Video Call (Max 30min)</span>
+                <span>Video Call (30min)</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -301,7 +305,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                 </svg>
-                <span>LinkedIn Profile Optimization</span>
+                <span>LinkedIn Profile</span>
               </li>
               <li class="flex justify-left space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -320,17 +324,18 @@
                 <span>Online Engagement</span>
               </li>
             </ul>
+
             <!-- Button-->
-            <span type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-12">
-                        <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                        </svg>
-                        <NuxtLink to="/billing">
-                            Buy now
-                        </NuxtLink>
-                    </span>
+            <button type="button"
+                    class="mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-12 ml-10">
+              <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+              </svg>
+              <NuxtLink to="/billing" target="_blank">
+                Buy now
+              </NuxtLink>
+            </button>
           </div>
         </div>
       </div>

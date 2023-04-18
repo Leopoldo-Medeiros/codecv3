@@ -19,7 +19,7 @@
       </div>
       <!-- Image -->
       <div class="md:w-1/2">
-        <img :src="'/img/dev1.png'" alt=""/>
+        <nuxt-img src="img/dev1.png" alt="" :placeholder="15" />
       </div>
     </div>
   </section>
