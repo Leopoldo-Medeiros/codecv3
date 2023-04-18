@@ -6,34 +6,36 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepack": "nuxt-module-build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --https --ssl-cert /lando/certs/proxy._lando_.crt --ssl-key /lando/certs/proxy._lando_.key",
     "dev:build": "nuxt build",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
-    "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/ui": "^0.4.0",
+    "@babel/eslint-parser": "^7.21.3",
+    "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
+    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/ui": "^0.4.1",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/stylelint-module": "^5.0.1",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.14",
-    "changelogen": "^0.5.1",
-    "eslint": "^8.36.0",
+    "changelogen": "^0.5.3",
+    "eslint": "^8.38.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "flowbite-typography": "^1.0.3",
-    "nuxt": "^3.3.1",
-    "postcss": "^8.4.21",
-    "stylelint": "^15.3.0",
+    "nuxt": "^3.4.1",
+    "postcss": "^8.4.22",
+    "stylelint": "^15.5.0",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^31.0.0",
-    "tailwindcss": "^3.2.7"
+    "stylelint-config-standard": "^33.0.0",
+    "tailwindcss": "^3.3.1"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
     "@heroicons/vue": "^2.0.16",
-    "nuxt-sanctum-auth": "^0.3.1"
+    "nuxt-sanctum-auth": "^0.4.6"
   }
 }

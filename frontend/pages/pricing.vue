@@ -17,7 +17,7 @@
       <!-- CARDS -->
       <div class="flex flex-col items-center justify-center mt-32 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
         <!-- Basic Card-->
-        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl transform transition duration-500 hover:scale-110">
+        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl transform transition duration-300 hover:scale-110">
           <h1 class="text-black font-semibold text-2xl">Basic</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;79€&nbsp;</span>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Standard -->
-        <div class="relative w-80 p-8 bg-gray-900 text-center rounded-3xl text-white pr-16 shadow-xl lg:w-80 lg:transform lg:scale-125 transform transition duration-500 hover:scale-110">
+        <div class="relative w-80 p-8 bg-gray-900 text-center rounded-3xl text-white pr-16 shadow-xl lg:w-80 lg:transform lg:scale-125 transform transition duration-300 hover:scale-150">
           <h1 class="text-white font-semibold text-2xl">Standard</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;149€&nbsp;</span>
@@ -224,7 +224,7 @@
         </div>
 
         <!-- Premium -->
-        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl duration-500 hover:shadow-2xl hover:scale-110">
+        <div class="rounded-box w-80 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl duration-300 hover:shadow-2xl hover:scale-110">
           <h1 class="text-black font-semibold text-2xl">Premium</h1>
           <p class="pt-2 tracking-wide">
             <span class="text-lg line-through dark:text-red-300">&nbsp;199€&nbsp;</span>

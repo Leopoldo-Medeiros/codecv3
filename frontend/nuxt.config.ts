@@ -24,11 +24,13 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    'nuxt-sanctum-auth'
+    'nuxt-sanctum-auth',
+    '@nuxt/image-edge'
   ],
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   nuxtSanctumAuth: {
+    token: false, // set true to test jwt-token auth instead of cookie
     baseUrl: process.env.API_URL,
     endpoints: {
       csrf: '/sanctum/csrf-cookie',
@@ -49,6 +51,12 @@ export default defineNuxtConfig({
     postcss: {
       postcssOptions: require("./postcss.config.js"),
     },
+    hotMiddleware: {
+      client: {
+        autoConnect: false,
+      },
+    },
+    indicator: false,
   },
   postcss: {
     plugins: {

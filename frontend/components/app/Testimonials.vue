@@ -12,7 +12,7 @@
 
         <!-- Testimonial 1 -->
         <div class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3">
-          <img src="img/lucas.png" class="w-16 -mt-14 rounded-full" alt=""/>
+          <img src="img/test1.png" class="w-16 -mt-14 rounded-full" alt=""/>
           <div class="my-2 space-y-1">
             <h2 class="text-xl font-semibold sm:text-1xl">Lucas Verdan</h2>
             <p class="px-5 text-sm dark:text-gray-400">IT Analyst</p>
