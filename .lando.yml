@@ -8,7 +8,7 @@ config:
   cache: redis
 services:
   node:
-    type: node:18
+    type: node:19
     ssl: 3000
     scanner: false
   appserver:

@@ -8,7 +8,7 @@
 
 ### Installation
 
-1. Clone this repository: `git clone git@github.com/Leopoldo-Medeiros/codecv3.git`
+1. Clone this repository: `git clone git@github.com:Leopoldo-Medeiros/codecv3.git`
 2. Navigate to the cloned repository: `cd codecv3`
 3. Navigate to the cloned repository: `git checkout nuxt3`
 4. Start Lando: `lando start`
