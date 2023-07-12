@@ -75,9 +75,9 @@ useHead({
 })
 
 const form = ref({
+  name: '',
   email: '',
-  password: '',
-  remember: ''
+  message: ''
 })
 
 const error = ref('')
