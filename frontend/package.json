@@ -12,30 +12,30 @@
     "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.3",
+    "@babel/eslint-parser": "^7.22.7",
     "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
-    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/module-builder": "^0.4.0",
     "@nuxt/ui": "^0.4.1",
     "@nuxtjs/eslint-config": "^12.0.0",
-    "@nuxtjs/eslint-module": "^4.0.2",
-    "@nuxtjs/stylelint-module": "^5.0.1",
-    "@nuxtjs/tailwindcss": "^6.6.6",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/stylelint-module": "^5.1.0",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.14",
-    "changelogen": "^0.5.3",
-    "eslint": "^8.38.0",
+    "changelogen": "^0.5.4",
+    "eslint": "^8.44.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "flowbite-typography": "^1.0.3",
-    "nuxt": "^3.4.1",
-    "postcss": "^8.4.22",
-    "stylelint": "^15.5.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^33.0.0",
-    "tailwindcss": "^3.3.1"
+    "nuxt": "^3.6.2",
+    "postcss": "^8.4.25",
+    "stylelint": "^15.10.1",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^34.0.0",
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.12",
-    "@heroicons/vue": "^2.0.16",
+    "@headlessui/vue": "^1.7.14",
+    "@heroicons/vue": "^2.0.18",
     "nuxt-sanctum-auth": "^0.4.6"
   }
 }
