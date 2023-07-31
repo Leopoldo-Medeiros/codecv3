@@ -24,6 +24,5 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('CodeCVPass123'),
             ]
         );
-
     }
 }

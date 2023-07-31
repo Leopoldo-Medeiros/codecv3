@@ -87,7 +87,6 @@
 </template>
 
 <script setup lang="ts">
-import { useState, ref, computed, onMounted, useNuxtApp } from '#imports'
 import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
 
 const { $sanctumAuth } = useNuxtApp()

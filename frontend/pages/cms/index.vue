@@ -1,0 +1,30 @@
+<template>
+  <div>
+    Page: foo
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { definePageMeta } from "#imports";
+
+definePageMeta({
+  middleware: ['auth'],
+  layout: 'cmsdefault'
+})
+
+useHead({
+  title: 'CODE CV - CMS',
+  meta: [
+    {
+      name: 'description',
+      content: 'CODE CV is a consulting company focused on the career of IT professionals.\n' +
+        'The key focus is to support the preparation of a professional CV, building a LinkedIn profile, and\n' +
+        'training for the interview processes.\n' +
+        'Our team is made up of IT professionals with experience in the market.'
+    }
+  ]
+})
+
+</script>
+
+<style scoped></style>

@@ -31,11 +31,26 @@ class UpdateNodePort extends Command
         $info = $this->getLandoInfo();
 
         $appUrl = $this->getUrl($info);
+        $appDomain = $this->getDomain($info);
         $port = $this->getNodePort($info);
 
         replaceInFile(
             '/BASE_URL=.*\\n/',
             "BASE_URL={$appUrl}:{$port}\n",
+            base_path('.env'),
+            true
+        );
+
+        replaceInFile(
+            '/SESSION_DOMAIN=.*\\n/',
+            "SESSION_DOMAIN={$appDomain}\n",
+            base_path('.env'),
+            true
+        );
+
+        replaceInFile(
+            '/SANCTUM_STATEFUL_DOMAINS=.*\\n/',
+            "SANCTUM_STATEFUL_DOMAINS=\"{$appDomain},{$appDomain}:{$port}\"\n",
             base_path('.env'),
             true
         );
@@ -74,6 +89,22 @@ class UpdateNodePort extends Command
         );
 
         return rtrim($url, '/');
+    }
+
+    /**
+     * Get the main domain to access the app.
+     */
+    public function getDomain($info): string
+    {
+        // Get the last URL in the list. This will have the https.
+        $url = end(
+            collect($info)
+                ->firstWhere('service', 'appserver_nginx')['urls']
+        );
+
+        $domain = preg_replace('(^https?://)', '', $url );
+
+        return rtrim($domain, '/');
     }
 
     /**

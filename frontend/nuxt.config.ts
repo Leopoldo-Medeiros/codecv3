@@ -1,22 +1,59 @@
-import fs from "fs";
+import fs from 'fs';
 
-let server = {}
-
-// If we're in dev we'll need to run this from
-// a https server for the newer chromium browsers.
-if (process.env.LANDO === 'ON') {
-  server = {
+// https://nuxt.com/docs/api/configuration/nuxt-config
+// @ts-ignore
+// @ts-ignore
+export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.BASE_URL,
+      apibaseUrl: process.env.API_URL,
+      authentication: {
+        token: false, // set true to test jwt-token auth instead of cookie
+        endpoints: {
+          csrf: '/sanctum/csrf-cookie',
+          cms: {
+            login: '/cms/login',
+            logout: '/cms/logout'
+          },
+          site: {
+            login: '/login',
+            logout: '/logout'
+          },
+          user: '/api/me'
+        },
+        redirects: {
+          cms: {
+            home: '/cms/dashboard',
+            login: '/cms/login',
+            logout: '/cms/login'
+          },
+          site: {
+            home: '/',
+            login: '/login',
+            logout: '/'
+          }
+        }
+      }
+    }
+  },
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: '172.18.0.2',
+        clientPort: 54345,
+        port: 54345
+      },
+      ports:
+        -'54345:54345'
+    },
     host: '0.0.0.0',
     https: {
       key: fs.readFileSync('/lando/certs/proxy._lando_.key'),
       cert: fs.readFileSync('/lando/certs/proxy._lando_.crt')
     }
-  }
-}
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  server,
+  },
   vue: {
     config: {
       productionTip: true,
@@ -24,32 +61,35 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    'nuxt-sanctum-auth',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt'
   ],
+  alias: {
+    pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs'
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   nuxtSanctumAuth: {
     token: false, // set true to test jwt-token auth instead of cookie
-    baseUrl: process.env.API_URL,
+    baseUrl: process.env.BASE_URL,
     endpoints: {
       csrf: '/sanctum/csrf-cookie',
-      login: '/login',
+      login: '/cms/login',
       logout: '/logout',
       user: '/api/me'
     },
     redirects: {
       home: '/',
-      login: '/login',
+      login: '/cms/login',
       logout: '/'
     }
   },
-  // Target (https://go.nuxtjs.dev/config-target)
   target: 'server',
-  css: ["@/assets/css/main.css"],
+  css: ['@/assets/css/main.css'],
   build: {
     postcss: {
-      postcssOptions: require("./postcss.config.js"),
+      postcssOptions: require('./postcss.config.js'),
     },
     hotMiddleware: {
       client: {

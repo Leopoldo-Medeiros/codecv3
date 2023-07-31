@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue'
   ],
   theme: {
     screens: {
-      'sm': '576px',
-      'md': '960px',
-      'lg': '1440px',
+      sm: '576px',
+      md: '960px',
+      lg: '1440px'
     },
     extend: {
       colors: {
@@ -25,7 +25,7 @@ module.exports = {
         veryPaleRed: 'hsl(13, 100%, 96%)',
         veryLightGray: 'hsl(0, 0%, 98%)'
       },
-      typography: ({theme}) => ( {
+      typography: ({ theme }) => ({
         orange: {
           css: {
             '--tw-prose-body': theme('colors.orange[500]'),
@@ -63,21 +63,22 @@ module.exports = {
             '--tw-prose-invert-th-borders': theme('colors.orange[600]'),
             '--tw-prose-invert-td-borders': theme('colors.orange[700]'),
             '--tw-format-invert-th-bg': theme('colors.orange[700]'),
-          },
-        },
-      } ),
+          }
+        }
+      }),
       screens: {
         sm: '480px',
         md: '768px',
         lg: '976px',
         xl: '1440px'
-      },
-    },
+      }
+    }
   },
   plugins: [
     require('flowbite-typography')({
-      className: 'custom-class',
+      className: 'custom-class'
     }),
     require('@tailwindcss/forms'),
-  ],
+    require('daisyui')
+  ]
 }
